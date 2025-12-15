@@ -1,0 +1,12 @@
+<Window x:Class="AutoSopCreator.SelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="選擇區域" WindowStyle="None" WindowState="Maximized" Topmost="True" Cursor="Cross" Background="Black">
+    <Grid>
+        <Image x:Name="BgImage" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Canvas x:Name="DrawingCanvas" Background="#55000000" 
+                MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp">
+            <Border x:Name="SelectionBox" BorderBrush="Red" BorderThickness="2" Visibility="Collapsed" Background="Transparent"/>
+        </Canvas>
+    </Grid>
+</Window>

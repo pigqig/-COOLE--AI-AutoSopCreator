@@ -1,0 +1,38 @@
+<Window x:Class="AutoSopCreator.HighlightEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="編輯標記 (點擊紅框可選取，拖曳白點調整大小)" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#333">
+    <Window.Resources>
+        <Style x:Key="HandleStyle" TargetType="Rectangle">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Fill" Value="White"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="#222">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="ImgPreview" Stretch="None"/>
+                <Canvas x:Name="OverlayCanvas" Width="{Binding ElementName=ImgPreview, Path=ActualWidth}" 
+                        Height="{Binding ElementName=ImgPreview, Path=ActualHeight}">
+                    </Canvas>
+            </Grid>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <TextBlock Text="💡 操作：點選紅框後可拖曳或調整，按 Delete 刪除" VerticalAlignment="Center" Foreground="#AAA" Margin="0,0,20,0"/>
+            <Button Content="➕ 新增紅框" Width="100" Click="BtnAddBox_Click" Background="#2196F3" Foreground="White" Margin="5"/>
+            <Button Content="❌ 刪除選取" Width="100" Click="BtnDeleteBox_Click" Background="#FF5722" Foreground="White" Margin="5"/>
+            <Button Content="✅ 確認完成" Width="120" Click="BtnConfirm_Click" Background="#4CAF50" Foreground="White" Margin="5"/>
+            <Button Content="取消" Width="80" Click="BtnCancel_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
