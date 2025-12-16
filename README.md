@@ -11,6 +11,13 @@
 
 ---
 
+本應用必需申請 Google gemiini API 才能使用：
+Gemini API 申請位置，需先申請 API Key 才能使用本軟體： https://aistudio.google.com/api-keys
+Gemini API Key 申請說明： https://ai.google.dev/gemini-api/docs/api-key?hl=zh-tw
+使用 NetFramework 6，下載位址： https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/sdk-6.0.428-windows-x64-installer
+
+---
+
 ### ✨ 核心功能 (Core Features)
 
 我們重新定義了螢幕錄製的體驗，讓「寫文件」這件事變得跟「做一遍」一樣簡單。
