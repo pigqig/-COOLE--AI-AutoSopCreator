@@ -79,7 +79,7 @@ Gemini API Key 申請說明： https://ai.google.dev/gemini-api/docs/api-key?hl=
 本專案採用 **[MIT License](LICENSE)** 授權。
 這意味著您可以免費使用、修改與分發本軟體，無論是用於個人學習或商業用途。
 
-**Developed by Joseph**
+**Developed by Lee**
 * 🌐 Website: [http://ourcoolidea.com](http://ourcoolidea.com)
 * 📧 Contact: (pigqig@gmail.com)
 
